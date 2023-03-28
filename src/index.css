@@ -1,13 +1,238 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+.App {
+  background-color: #eee;
+  width: 100vw;
+  height: 100vh;
+}
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+body {
+  font-size: 14px;
+  padding: 0;
+  margin: 0px;
+  background-color: #282e45;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(40, 46, 69, 1) 30%,
+    rgba(40, 46, 69, 1) 79%,
+    rgba(3, 125, 149, 1) 100%
+  );
+  color: white;
+  font-family: "Roboto", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  outline: none;
+  background-color: #282e45;
+  color: aqua;
+}
+.deleteButton {
+  margin-right: 25px;
+}
+h1 {
+  font-size: 2.5em;
+  margin: 30px 0;
+  font-weight: bold;
+  color: antiquewhite;
+}
+h3 {
+  font-size: 1, 5rem;
+  margin: 30px 0;
+  font-weight: bold;
+  color: antique;
+  cursor: pointer;
+}
+h5 {
+  color: antiquewhite;
+}
+.main-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.movieList {
+  margin-top: 50px;
+}
+header {
+  width: 100%;
+  padding: 20px 20px;
+  position: relative;
+}
+div#header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h3#logo {
+  font-size: 2em;
+  color: aliceblue;
+}
+
+div#input-div {
+  position: relative;
+}
+input {
+  padding: 10px 10px;
+  border: none;
+  outline: none;
+  width: 300px;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+input:focus {
+  box-shadow: 0px 0px 10px 2px #7154af;
+}
+.searchList {
+  background-color: #282e45;
+  top: 8px;
+  position: absolute;
+  right: 280px;
+  width: 375px;
+}
+ul#searchList {
+  background-color: #282e45;
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  top: 70px;
+  right: 280;
+  padding: 10px 10px;
+  z-index: 10000;
+}
+p {
+  color: antiquewhite;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  font-size: 16px;
+}
+ul::-webkit-scrollbar {
+  width: 12px;
+}
+ul::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px white;
+  border-radius: 10px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 3px white;
+}
+
+li {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  align-items: center;
+  padding: 5px 5px;
+  border-radius: 5px;
+}
+
+li:hover {
+  background-color: white;
+  color: #282e45;
+  font-weight: bold;
+}
+
+span {
+  width: 70%;
+  cursor: default;
+  color: aliceblue;
+}
+
+img {
+  height: 100px;
+}
+
+img.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  overflow: hidden;
+}
+
+div.half {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 300px;
+}
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+@media screen and (max-width: 900px) {
+  div.half {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  div.half:last-child {
+    position: right;
+  }
+}
+header div#header h3#logo {
+  font-size: 1.6em;
+}
+
+@media screen and (max-width: 600px) {
+  header div#header div#input-div input {
+    padding: 5px 10px;
+    width: 280px;
+  }
+
+  h3#logo {
+    margin-bottom: 20px;
+  }
+
+  div.half {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  div.half {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  div.half:last-child {
+    position: right;
+  }
+}
+header div#header h3#logo {
+  font-size: 1.6em;
 }

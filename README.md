@@ -1,4 +1,37 @@
-# Getting Started with Create React App
+# MovieWatchlist app
+
+App made using React JS for searching movies and adding them to Watch list. For store data used firebase.
+This is final React project in my coding bootcamp.
+
+## General Information
+
+- Each time you type something request is sent and results are shown below the Search bar
+- You can click save button to add movie to the watchlist
+- Once movie is added, it's stored in firebase, and displayed on the page in To Watch section
+- Each movie displays title,poster and short description.
+- When delete button is clicked, movie should be removed from the list
+- When watched button is clicked, movie should be crossed out and marked as viewed
+- For API movies was used "https://www.themoviedb.org/"
+
+# Status
+
+Project is: finished
+
+## Screenshots
+
+![Example screenshot](./src/assets/movieapp.png)
+
+## Technologies Used
+
+- React Js
+- firebase
+- API
+- css
+- talwind css
+
+## Features
+
+App is responsive on all devices.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
