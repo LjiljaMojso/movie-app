@@ -29,7 +29,7 @@ const Movie = ({ item, deleteMovie, editMovie }) => {
         Delete Movie
       </button>
       <button variant="light" onClick={() => editMovie(item.id, item.watched)}>
-        Watched
+        {item.watched ? " Watched" : "To watch"}
       </button>
     </div>
   );
