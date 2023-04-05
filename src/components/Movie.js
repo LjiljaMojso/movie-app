@@ -1,4 +1,5 @@
 import React from "react";
+import Accordion from "./Accordion";
 
 const Movie = ({ item, deleteMovie, editMovie }) => {
   return (
@@ -19,7 +20,7 @@ const Movie = ({ item, deleteMovie, editMovie }) => {
         )}
 
         <h5>{item.date ? item.date.substring(0, 4) : ""}</h5>
-        <p>{item.overview ? item.overview : ""}</p>
+        <Accordion item={item} />
       </div>
       <button
         variant="light"
