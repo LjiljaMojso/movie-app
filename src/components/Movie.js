@@ -25,11 +25,15 @@ const Movie = ({ item, deleteMovie, editMovie }) => {
       <button
         variant="light"
         onClick={() => deleteMovie(item.id)}
-        className="deleteButton"
+        className="p-2 hover:bg-[#181B37] rounded-xl mr-5"
       >
         Delete Movie
       </button>
-      <button variant="light" onClick={() => editMovie(item.id, item.watched)}>
+      <button
+        className="p-2 hover:bg-[#181B37] rounded-xl"
+        variant="light"
+        onClick={() => editMovie(item.id, item.watched)}
+      >
         {item.watched ? " Watched" : "To watch"}
       </button>
     </div>

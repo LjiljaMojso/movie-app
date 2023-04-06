@@ -18,7 +18,9 @@ const App = () => {
   const [movies, setMovies] = useState([]);
   const [showMovies, setShowMovies] = useState(true);
   const [results, setResults] = useState([]);
-
+  const handleClose = (e) => {
+    setResults([]);
+  };
   const searchMovie = (string) => {
     fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=5b21e1113af02bf461ef9d53c7bcfe35&language=en-US&page=1&include_adult=false&query=${string}`
@@ -79,6 +81,7 @@ const App = () => {
         <SearchResultsList
           results={results}
           saveMovieInFirebase={saveMovieInFirebase}
+          handleClose={handleClose}
         />
       )}
 

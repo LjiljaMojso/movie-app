@@ -1,6 +1,6 @@
 import React from "react";
 import MovieListItem from "./MovieListItem";
-const SearchResultsList = ({ results, saveMovieInFirebase }) => {
+const SearchResultsList = ({ results, saveMovieInFirebase, handleClose }) => {
   return (
     <div className="searchList">
       {results.length > 0 && (
@@ -11,6 +11,7 @@ const SearchResultsList = ({ results, saveMovieInFirebase }) => {
                 item={item}
                 key={item.id}
                 saveMovieInFirebase={saveMovieInFirebase}
+                handleClose={handleClose}
               />
             );
           })}
